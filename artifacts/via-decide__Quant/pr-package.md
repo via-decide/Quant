@@ -4,6 +4,18 @@ Title: Implement an ultra-low-latency risk firewall called via-quant-risk to...
 ## Summary
 - Repo orchestration task for via-decide/Quant
 - Goal: Prevent catastrophic financial ruin by mathematically ensuring the system cannot exceed predefined risk parameters.
+Branch: simba/implement-a-deterministic-historical-simulator-c
+Title: Implement a deterministic historical simulator called via-quant-backt...
+
+## Summary
+- Repo orchestration task for via-decide/Quant
+- Goal: Provide mathematical proof of a strategy's viability by simulating slippage, fees, and latency before risking real capital.
+Branch: simba/implement-a-deterministic-zero-allocation-market
+Title: Implement a deterministic, zero-allocation market data ingestor and L...
+
+## Summary
+- Repo orchestration task for via-decide/Quant
+- Goal: Establish the bedrock for the trading firm capable of reacting to price changes in microseconds.
 
 ## Testing Checklist
 - [ ] Run unit/integration tests
