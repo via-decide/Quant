@@ -1,6 +1,10 @@
 You are working in repository via-decide/Quant on branch main.
 
 MISSION
+Implement an optimized signal pipeline (via-signal-generator) and ML inference engine (via-quant-ml). 1. Create src/core/alpha/ and src/core/alpha/ml/. 2. Implement SignalOrchestrator.ts to manage independent AlphaModel instances. 3. Create IndicatorEngine.ts with $O(1)$ incremental updates using circular buffers. 4. Implement OrderBookImbalance.ts for micro-structure feature extraction. 5. Build an InferenceWorker.ts using WebAssembly/ONNX to run predictive ML models on a dedicated thread. 6. Implement FeatureStore.ts to pass data to the ML worker instantly via SharedArrayBuffer.
+
+CONSTRAINTS
+Absolutely no $O(N)$ calculations on the hot path. ML inference must use WASM SIMD and avoid blocking the main trading thread.
 Implement an ultra-low-latency risk firewall called via-quant-risk to intercept and size all outbound orders. 1. Create src/core/risk-management/. 2. Implement RiskEngine.ts as the final gatekeeper for all strategy signals. 3. Create PositionSizer.ts to dynamically calculate optimal trade sizes based on portfolio equity and volatility. 4. Implement ExposureLimits.ts to enforce max gross/net exposure and single-asset concentration limits. 5. Build MarginTracker.ts to simulate exchange liquidation engines in real-time. 6. Implement a CircuitBreaker.ts to trigger a global "Cancel All" if anomalous latency or flash crashes occur.
 
 CONSTRAINTS

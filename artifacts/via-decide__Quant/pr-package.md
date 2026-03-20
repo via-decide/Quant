@@ -1,3 +1,9 @@
+Branch: simba/implement-an-optimized-signal-pipeline-via-signa
+Title: Implement an optimized signal pipeline (via-signal-generator) and ML ...
+
+## Summary
+- Repo orchestration task for via-decide/Quant
+- Goal: Translate market chaos into actionable alpha by identifying subtle, non-linear market patterns faster than retail bots.
 Branch: simba/implement-an-ultra-low-latency-risk-firewall-cal
 Title: Implement an ultra-low-latency risk firewall called via-quant-risk to...
 
