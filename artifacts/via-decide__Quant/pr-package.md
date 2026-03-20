@@ -1,3 +1,9 @@
+Branch: simba/implement-a-smart-order-routing-sor-pipeline-cal
+Title: Implement a Smart Order Routing (SOR) pipeline called via-execution-r...
+
+## Summary
+- Repo orchestration task for via-decide/Quant
+- Goal: Preserve alpha by minimizing slippage, hiding trading footprints, and reducing transaction costs.
 Branch: simba/implement-an-optimized-signal-pipeline-via-signa
 Title: Implement an optimized signal pipeline (via-signal-generator) and ML ...
 

@@ -1,6 +1,10 @@
 You are working in repository via-decide/Quant on branch main.
 
 MISSION
+Implement a Smart Order Routing (SOR) pipeline called via-execution-router to slice large parent orders. 1. Create src/core/execution/. 2. Implement an ExecutionEngine.ts to manage Parent orders and spawn fractional Child orders. 3. Create SmartOrderRouter.ts to analyze consolidated L2 books and route to venues with the best price/liquidity. 4. Implement AlgoSniper.ts for VWAP/TWAP order slicing algorithms. 5. Build IcebergManager.ts to replenish visible limit order quantities from hidden parent sizes. 6. Implement a FillReconciler.ts to aggregate partial fills and calculate blended entry prices.
+
+CONSTRAINTS
+Do not block the signal-generation loop. Track child order states asynchronously via WebSocket User Data streams, not REST APIs.
 Implement an optimized signal pipeline (via-signal-generator) and ML inference engine (via-quant-ml). 1. Create src/core/alpha/ and src/core/alpha/ml/. 2. Implement SignalOrchestrator.ts to manage independent AlphaModel instances. 3. Create IndicatorEngine.ts with $O(1)$ incremental updates using circular buffers. 4. Implement OrderBookImbalance.ts for micro-structure feature extraction. 5. Build an InferenceWorker.ts using WebAssembly/ONNX to run predictive ML models on a dedicated thread. 6. Implement FeatureStore.ts to pass data to the ML worker instantly via SharedArrayBuffer.
 
 CONSTRAINTS
