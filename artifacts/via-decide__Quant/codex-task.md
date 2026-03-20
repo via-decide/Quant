@@ -1,6 +1,10 @@
 You are working in repository via-decide/Quant on branch main.
 
 MISSION
+Implement institutional FIX connectivity (via-quant-fix) and a derivatives pricer (via-quant-options). 1. Create src/core/connectivity/fix/ and src/core/derivatives/. 2. Implement FixSession.ts to manage raw TCP sockets, logon sequences, and heartbeats. 3. Create ZeroCopyParser.ts to parse \x01 delimited FIX byte streams directly into memory pools. 4. Implement BlackScholes.ts for vectorized European options pricing. 5. Build GreeksCalculator.ts (Delta, Gamma, Theta, Vega, Rho) and ImpliedVolatility.ts (Newton-Raphson). 6. Expose an interactive 3D WebGL Volatility Surface dashboard.
+
+CONSTRAINTS
+String manipulation is forbidden on the FIX hot path. Use polynomial approximations or lookup tables for Cumulative Normal Distribution functions in options pricing.
 Implement a Smart Order Routing (SOR) pipeline called via-execution-router to slice large parent orders. 1. Create src/core/execution/. 2. Implement an ExecutionEngine.ts to manage Parent orders and spawn fractional Child orders. 3. Create SmartOrderRouter.ts to analyze consolidated L2 books and route to venues with the best price/liquidity. 4. Implement AlgoSniper.ts for VWAP/TWAP order slicing algorithms. 5. Build IcebergManager.ts to replenish visible limit order quantities from hidden parent sizes. 6. Implement a FillReconciler.ts to aggregate partial fills and calculate blended entry prices.
 
 CONSTRAINTS

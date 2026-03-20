@@ -1,3 +1,9 @@
+Branch: simba/implement-institutional-fix-connectivity-via-qua
+Title: Implement institutional FIX connectivity (via-quant-fix) and a deriva...
+
+## Summary
+- Repo orchestration task for via-decide/Quant
+- Goal: Graduate to institutional-grade direct exchange connectivity and unlock complex Volatility Arbitrage strategies.
 Branch: simba/implement-a-smart-order-routing-sor-pipeline-cal
 Title: Implement a Smart Order Routing (SOR) pipeline called via-execution-r...
 

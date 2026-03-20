@@ -1,6 +1,7 @@
 {
   "repo": "via-decide/Quant",
   "mode": "codex_then_antigravity",
+  "branch": "simba/implement-institutional-fix-connectivity-via-qua",
   "branch": "simba/implement-a-smart-order-routing-sor-pipeline-cal",
   "branch": "simba/implement-an-optimized-signal-pipeline-via-signa",
   "branch": "simba/implement-an-ultra-low-latency-risk-firewall-cal",
