@@ -5,6 +5,10 @@ Implement a deterministic historical simulator called via-quant-backtester to ev
 
 CONSTRAINTS
 Ensure absolute parity between the Backtesting Engine and the Live Trading Engine. Strictly forbid "lookahead bias" by tightly encapsulating the data feeder.
+Implement a deterministic, zero-allocation market data ingestor and L2 Order Book called via-quant-core. 1. Create src/core/market-data/. 2. Implement OrderBook.ts using flat Float64Array buffers or WebAssembly/Rust for $O(\log n)$ insertions/deletions. 3. Create FeedHandler.ts to parse WebSocket feeds (JSON/binary) and update the book without GC pressure. 4. Implement a RingBuffer.ts (lock-free queue) to pass updates to worker threads, bypassing Node.js serialization. 5. Build OrderManager.ts to track local order states. 6. Implement a TickSnapshot.ts service to compress L2 state into a Time-Series DB (QuestDB/InfluxDB).
+
+CONSTRAINTS
+Strictly enforce zero-allocation on the hot path. Forbid new Object(), [], or JSON.parse() during the active trading loop to prevent garbage collection pauses and slippage.
 
 PROCESS (MANDATORY)
 1. Read README.md and AGENTS.md before editing.
