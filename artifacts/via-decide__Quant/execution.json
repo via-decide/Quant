@@ -1,6 +1,7 @@
 {
   "repo": "via-decide/Quant",
   "mode": "codex_then_antigravity",
+  "branch": "simba/implement-an-ultra-low-latency-risk-firewall-cal",
   "branch": "simba/implement-a-deterministic-historical-simulator-c",
   "branch": "simba/implement-a-deterministic-zero-allocation-market",
   "files_to_create": [
