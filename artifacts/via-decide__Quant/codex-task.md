@@ -1,6 +1,10 @@
 You are working in repository via-decide/Quant on branch main.
 
 MISSION
+Synthesize the quantitative system into ARCHITECTURE.md and generate automated documentation. 1. Create docs/architecture/ and a Docusaurus/VitePress workspace. 2. Draft ARCHITECTURE.md mapping the data flow: FIX -> Core -> Signal -> Risk -> Execution -> FIX. 3. Detail the "Zero-GC / Lock-Free" philosophy and SharedArrayBuffer usage. 4. Document backtester deterministic event-loops and strict lookahead bias prevention. 5. Implement DocGenerator.ts to scrape JSDoc comments into the static HTML portal.
+
+CONSTRAINTS
+Clearly separate the latency-critical "Hot Path" from the "Cold Path". The docs must act as the absolute source of truth for risk-management standards.
 Implement institutional FIX connectivity (via-quant-fix) and a derivatives pricer (via-quant-options). 1. Create src/core/connectivity/fix/ and src/core/derivatives/. 2. Implement FixSession.ts to manage raw TCP sockets, logon sequences, and heartbeats. 3. Create ZeroCopyParser.ts to parse \x01 delimited FIX byte streams directly into memory pools. 4. Implement BlackScholes.ts for vectorized European options pricing. 5. Build GreeksCalculator.ts (Delta, Gamma, Theta, Vega, Rho) and ImpliedVolatility.ts (Newton-Raphson). 6. Expose an interactive 3D WebGL Volatility Surface dashboard.
 
 CONSTRAINTS

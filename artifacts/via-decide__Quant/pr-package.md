@@ -1,3 +1,9 @@
+Branch: simba/synthesize-the-quantitative-system-into-architec
+Title: Synthesize the quantitative system into ARCHITECTURE.md and generate ...
+
+## Summary
+- Repo orchestration task for via-decide/Quant
+- Goal: Solidify the firm's intellectual property, enabling quants and systems engineers to contribute alpha safely and rapidly.
 Branch: simba/implement-institutional-fix-connectivity-via-qua
 Title: Implement institutional FIX connectivity (via-quant-fix) and a deriva...
 
